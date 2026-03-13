@@ -102,6 +102,45 @@ h1 {
     border-radius: 8px;
 }
 
+/* Link styling */
+.hidden-note a {
+    color: #ff3b3b; /* red for YouTube links */
+}
+
+.spotify-link {
+    color: #1DB954; /* Spotify green */
+    font-weight: bold;
+}
+
+/* Image lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.gallery img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
 </style>
 </head>
 
@@ -205,19 +244,19 @@ BUT... Again, this site is just an idea for an app right now.. I think music nee
 (Not that you need the link for this specific playlist since it's 4 songs, but essentially the link to the playlist would appear here as well)
 </p>
 <p>
-<a href="#" target="_blank">https://open.spotify.com/playlist/2zi7D4cKMEkdmuNXjzDC3t?si=ae180b2c47de43fc</a>
+<a class="spotify-link" href="https://open.spotify.com/playlist/2zi7D4cKMEkdmuNXjzDC3t?si=ae180b2c47de43fc" target="_blank">https://open.spotify.com/playlist/2zi7D4cKMEkdmuNXjzDC3t?si=ae180b2c47de43fc</a>
 </p>
 </div>
 
 <h2 style="text-align:center;">Accompanying Imagery ;)</h2>
 
 <div class="gallery">
-<img src="assets/HarryOne.jpg">
-<img src="assets/HarryTwo.jpg">
-<img src="assets/CalumnOne.jpg">
-<img src="assets/CalumnTwo.jpg">
-<img src="assets/ElliotOne.jpg">
-<img src="assets/JohnnyOne.JPG">
+<img src="assets/HarryOne.jpg" onclick="openLightbox(this.src)">
+<img src="assets/HarryTwo.jpg" onclick="openLightbox(this.src)">
+<img src="assets/CalumnOne.jpg" onclick="openLightbox(this.src)">
+<img src="assets/CalumnTwo.jpg" onclick="openLightbox(this.src)">
+<img src="assets/ElliotOne.jpg" onclick="openLightbox(this.src)">
+<img src="assets/JohnnyOne.JPG" onclick="openLightbox(this.src)">
 </div>
 
 
@@ -237,7 +276,22 @@ function toggleNote(id) {
         note.style.display = "block";
     }
 }
+
+function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    img.src = src;
+    lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
 </script>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
 
 </body>
 </html>
