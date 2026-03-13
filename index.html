@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Disc</title>
+
+<style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #0f0f0f;
+    color: #ffffff;
+}
+
+.header {
+    width: 100%;
+    height: 350px;
+    background-image: url("assets/HeaderOne.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.voice-note {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.track {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #1b1b1b;
+    border-radius: 10px;
+}
+
+.reveal-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #2a2a2a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.reveal-btn:hover {
+    background: #3a3a3a;
+}
+
+.hidden-note {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #0f0f0f;
+    border-left: 3px solid #555;
+    border-radius: 6px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    opacity: 0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="container">
+
+<h1>Prototype For Matt</h1>
+
+<div class="voice-note">
+<p>Listen to this first :)
+    This is the first prototype I'm sharing with you. It's just a skeleton for the IDEA I'm going for.
+    I want to create an app that makes sharing playlists more meaningful.
+    Think of it like 'The Digital Burned CD' where you can upload a cover image, write some notes and make the listening experience more personal.
+    Let me know what you think... Give me feedback. Let me know ideas you have when you're making playlist and wish there was a feature that existed.
+    REEEEEEEEEE!!!!
+
+</p>
+<audio controls>
+<source src="assets/voice-note.m4a" type="audio/mp4">
+Your browser does not support the audio element.
+</audio>
+</div>
+
+
+<div class="track">
+<strong>Track 1</strong><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/56k68P3bFQvnKw89hizJFZ?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<button class="reveal-btn" onclick="toggleNote('note1')">Click BEFORE you listen</button>
+
+<div id="note1" class="hidden-note">
+Dude, I just can't get enough of this song... I keep saying it but ONLY HE COULD WRITE THIS SONG!!! 
+Ahh, it's so good man. It's like.. I love when huge philosophical ideas get reduced to small bite sized pieces.
+Like when he says "it's a lifetime of one or the other" like...
+That's such a powerful line dude... AHHH, so good.
+</div>
+</div>
+
+
+<div class="track">
+<strong>Track 2</strong><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3M8QCvzsGSQE0gBXltnWr1?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<button class="reveal-btn" onclick="toggleNote('note2')">Click AFTER you listen</button>
+
+<div id="note2" class="hidden-note">
+This is Calumn's solo stuff from 5SOS.. and it's amazing. I've played tf out of this song... but THIS is where the real magic of this song is: <a href="https://www.youtube.com/watch?v=qwhlkhmubKU" target="_blank">https://www.youtube.com/watch?v=qwhlkhmubKU</a>
+</div>
+</div>
+
+
+<div class="track">
+<strong>Track 3</strong><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/1pTwsLvnN8xPULDGzRjnfd?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<button class="reveal-btn" onclick="toggleNote('note3')">Click AFTER you listen</button>
+
+<div id="note3" class="hidden-note">
+I've narrowed down the Elliot Smith discography to THIS ONE song... 
+Masterpiece isn't a good enough word to describe this song. 
+You HAVE TO HAVE TO HAVE TO watch this interview. 
+These guys don't take him seriously at ALL until he starts singing and you can just watch everyone be entranced by this guy. 
+It's magic. <a href="https://www.youtube.com/watch?v=dwsSbAKs3yo" target="_blank">https://www.youtube.com/watch?v=dwsSbAKs3yo</a>
+</div>
+</div>
+
+
+<div class="track">
+<strong>Track 4</strong><br>
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6YQkya82b7rjiho4cFbS8k?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<button class="reveal-btn" onclick="toggleNote('note4')">Click BEFORE you listen</button>
+
+<div id="note4" class="hidden-note">
+... The first line of the song will make you go "Oh my god, Elliot Smith is a genius"... 
+I found this cuz of the lyric "The bartender's singing Clementine" In the Elliot Smith song and I went "Huh.. I wonder what song that is?"
+Then I found this and went "Fuckkkkkk me dude he's the goat."
+</div>
+</div>
+
+
+<h2 style="text-align:center;">Accompanying Imagery ;)</h2>
+
+<div class="gallery">
+<img src="assets/HarryOne.jpg">
+<img src="assets/HarryTwo.jpg">
+<img src="assets/CalumnOne.jpg">
+<img src="assets/CalumnTwo.jpg">
+<img src="assets/ElliotOne.jpg">
+<img src="assets/JohnnyOne.JPG">
+</div>
+
+
+<div class="footer">
+Made for My Bruddah (you know the voice)
+</div>
+
+</div>
+
+<script>
+function toggleNote(id) {
+    const note = document.getElementById(id);
+
+    if (note.style.display === "block") {
+        note.style.display = "none";
+    } else {
+        note.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
